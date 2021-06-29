@@ -4,4 +4,5 @@ resource "aws_instance" "myserver"{
 	tags = {
 		Name = var.vm_name
 	}
+    count = var.vm_count
 }

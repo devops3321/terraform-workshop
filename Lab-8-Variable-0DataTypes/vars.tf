@@ -1,2 +1,6 @@
-variable "vm_count"{}
-variable "vm_name"{}
+variable "vm_count"{
+    type = number
+}
+variable "vm_name"{
+    type = string
+}

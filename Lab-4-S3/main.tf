@@ -4,6 +4,6 @@ provider "aws" {
 	    secret_key = "YOUR_SECRET_ACCESS_KEY"
 }
 resource "aws_s3_bucket" "mybucket"{
-	bucket = "thinknyx-bucket-0938"
-	acl = "private"
+	bucket = "YOUR_BUCKET_NAME"
+	acl = "public-read"
 }

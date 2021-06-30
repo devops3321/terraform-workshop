@@ -1,6 +1,6 @@
 variable "acl_type"{
-    type = "string"
+    type = string
 }
 variable "storage_names"{
-    type = "list"
+    type = list
 }

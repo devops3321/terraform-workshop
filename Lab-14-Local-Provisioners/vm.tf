@@ -5,6 +5,6 @@ resource "aws_instance" "myserver"{
 		Name = "Terraform In Action"
 	}
 	provisioner "local-exec"{
-		command = "echo aws_instance.myserver.private_ip > output.txt"
+		command = "echo ${self.private_ip} > output.txt"
 	}
 }

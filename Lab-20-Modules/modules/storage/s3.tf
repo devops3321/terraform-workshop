@@ -1,4 +1,4 @@
 resource "aws_s3_bucket" "mybucket"{
-	bucket = "terralab-demo-440"
+	bucket = var.storage_name
 	acl = "public-read"
 }

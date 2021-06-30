@@ -1,3 +1,10 @@
+resource "aws_s3_bucket" "mybucket"{
+	bucket = var.storage_name
+	acl = var.acl_type
+	depends_on = [
+		aws_instance.myserver
+	]
+}
 resource "aws_instance" "myserver"{
 	ami = "ami-090717c950a5c34d3"
 	instance_type = "t2.micro"
@@ -23,9 +30,5 @@ resource "aws_security_group" "mysg" {
     protocol         = "-1"
     cidr_blocks      = ["0.0.0.0/0"]
   }
-}
-resource "aws_s3_bucket" "mybucket"{
-	bucket = var.storage_name
-	acl = var.acl_type
 }
 
